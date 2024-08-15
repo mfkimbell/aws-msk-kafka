@@ -54,4 +54,3 @@ Consume From Topic
 
 References:
 * https://www.youtube.com/watch?v=5WaIgJwYpS8&list=PLhr1KZpdzukd2EuSB1F9zoWMTwinTkqVn
-* 
