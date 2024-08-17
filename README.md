@@ -2,7 +2,8 @@
 
 Live Update from Athena:
 -----
-![short-ezgif com-resize](https://github.com/user-attachments/assets/82e30609-bd51-4eba-8bc0-565af69f5b06)
+![live results](https://github.com/user-attachments/assets/5dfe79a4-36d7-4a96-9fa8-d9a03296a80e)
+
 
 
 EC2 setup for Producer and Consumer
