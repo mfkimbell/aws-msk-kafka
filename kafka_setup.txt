@@ -1,0 +1,97 @@
+
+
+EC2 setup for Producer and Consumer
+-----------------------------------------------------------------------
+sudo yum install java-1.8.0
+
+wget https://archive.apache.org/dist/kafka/2.6.2/kafka_2.12-2.6.2.tgz
+
+cd kafka
+
+aws configure 
+
+aws kafka list-clusters
+
+
+Create a Topic (for test)
+----------------------
+
+Template
+
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-topics.sh --create --bootstrap-server <bootstrap server address> --replication-factor 3 --partitions 1 --topic <topic name>
+
+Actual
+
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-topics.sh --create --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --replication-factor 3 --partitions 1 --topic Mitch_Topic
+
+
+List Topics
+--------------------
+
+Template
+
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-topics.sh --bootstrap-server <bootstrap server address> --list
+
+Actual
+
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-topics.sh --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --list
+
+
+Produce to Topic
+----------------
+
+Template
+
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-producer.sh --bootstrap-server <bootstrap server address> --topic <topic name>
+
+Actual
+
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-producer.sh --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --topic Mitch_Topic
+
+
+Consume From Topic
+------
+
+Template
+
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-consumer.sh --bootstrap-server <bootstrap server address> --topic <topic name> --from-beginning
+
+Actual
+
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-consumer.sh --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --topic Mitch_Topic --from-beginning
+
+
+Setting up Jupyter EC2
+------
+
+sudo yum install -y python3 python3-pip python3-devel
+
+pip3 install --user jupyter
+
+jupyter notebook --ip=0.0.0.0 --no-browser --port=8888
+
+http://<public IP address>:8888/?token=<token provided by jupyter>
+
+http://52.90.179.27:8888/?token=<token provided by jupyter>
+
+
+Getting Stock Market Data on EC2:
+-----
+
+* Upload data to S3
+* Get S3 URI
+
+
+aws configure
+
+* Enter access keys
+  
+Template
+
+aws s3 cp s3://<path to bucket>/<file name> /home/<user>/
+
+Actual
+
+aws s3 cp s3://data-mfkimbell/indexProcessed.csv /home/ec2-user/
+
+
