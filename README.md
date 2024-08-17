@@ -52,5 +52,22 @@ Consume From Topic
 /home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-consumer.sh --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --topic MSK101Topic --from-beginning
 ```
 
+Setting up EC2 Jupyter Producer
+------
+```
+sudo yum install -y python3 python3-pip python3-devel
+```
+```
+pip3 install --user jupyter
+```
+```
+jupyter notebook --ip=0.0.0.0 --no-browser --port=8888
+```
+```
+http://<public IP address>:8888/?token=<token provided by jupyter>
+```
+```
+http://52.90.179.27:8888/?token=<token provided by jupyter>
+```
 References:
 * https://www.youtube.com/watch?v=5WaIgJwYpS8&list=PLhr1KZpdzukd2EuSB1F9zoWMTwinTkqVn
