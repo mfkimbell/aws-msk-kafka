@@ -1,5 +1,9 @@
 # aws-msk-kafka
 
+![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
+
+
+https://github.com/user-attachments/assets/2b13b23e-cfd7-4cf3-b386-f772c8ac3437
 
 
 EC2 setup for Producer and Consumer
