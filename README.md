@@ -1,9 +1,8 @@
 # aws-msk-kafka
 
-![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
-
-
-https://github.com/user-attachments/assets/2b13b23e-cfd7-4cf3-b386-f772c8ac3437
+Live Update from Athena:
+-----
+![short-ezgif com-resize](https://github.com/user-attachments/assets/82e30609-bd51-4eba-8bc0-565af69f5b06)
 
 
 EC2 setup for Producer and Consumer
@@ -105,8 +104,6 @@ Actual
 aws s3 cp s3://data-mfkimbell/indexProcessed.csv /home/ec2-user/
 ```
 
-Live Update from Athena:
------
 
 
 
