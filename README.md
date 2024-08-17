@@ -33,7 +33,7 @@ Template
 ```
 Actual
 ```
-/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-topics.sh --create --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --replication-factor 3 --partitions 1 --topic MSK101Topic
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-topics.sh --create --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --replication-factor 3 --partitions 1 --topic Mitch_Topic
 ```
 
 List Topics
@@ -55,7 +55,7 @@ Template
 ```
 Actual
 ```
-/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-producer.sh --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --topic MSK101Topic
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-producer.sh --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --topic Mitch_Topic
 ```
 
 Consume From Topic
@@ -66,7 +66,7 @@ Template
 ```
 Actual
 ```
-/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-consumer.sh --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --topic MSK101Topic --from-beginning
+/home/ec2-user/kafka_2.12-2.6.2/bin/kafka-console-consumer.sh --bootstrap-server b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092 --topic Mitch_Topic --from-beginning
 ```
 
 Setting up Jupyter EC2
