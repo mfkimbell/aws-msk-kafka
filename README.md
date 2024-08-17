@@ -12,8 +12,13 @@ EC2 setup for Producer and Consumer
 
 `aws kafka list-clusters`
 
-bootstrap server address:
-b-2.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-3.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092,b-1.testmsk.sqb9zi.c10.kafka.us-east-1.amazonaws.com:9092
+How to Find Bootstrap Server/Broker Addresses:
+-----
+* Go to your msk instance
+<img width="578" alt="Screenshot 2024-08-17 at 4 29 16 PM" src="https://github.com/user-attachments/assets/87458d29-3376-4e27-8043-bf459d30258a">
+<img width="489" alt="Screenshot 2024-08-17 at 4 30 02 PM" src="https://github.com/user-attachments/assets/73e64142-b438-4a07-a875-4668b8c29889">
+
+
 
 Create a Topic (for test)
 ----------------------
@@ -93,6 +98,11 @@ Actual
 ```
 aws s3 cp s3://data-mfkimbell/indexProcessed.csv /home/ec2-user/
 ```
+
+Live Update from Athena:
+-----
+
+
 
 # References:
 
