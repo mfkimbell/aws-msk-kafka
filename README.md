@@ -1,5 +1,7 @@
 # aws-msk-kafka
 
+
+
 EC2 setup for Producer and Consumer
 -----------------------------------------------------------------------
 `sudo yum install java-1.8.0`
