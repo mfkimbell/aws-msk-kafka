@@ -4,7 +4,13 @@ Live Update from Athena:
 -----
 ![live_results](https://github.com/user-attachments/assets/c8221f8e-f68a-4b0e-a1f2-20e2518f2ff3)
 
+### What is AWS Athena
+* AWS Athena is an serverless, interactive query service that enables you to analyze data directly in Amazon S3 using standard SQL.
 
+### What is AWS Glue
+* AWS Glue is a fully managed extract, transform, and load (ETL) service that is designed to make it easy for customers to prepare and load their data for analytics.
+* In our case, we use a Glue Crawler to scrape the json file into a Glue data catalog for Athena to analyze.
+  
 EC2 setup for Producer and Consumer
 -----------------------------------------------------------------------
 `sudo yum install java-1.8.0`
