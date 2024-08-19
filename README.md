@@ -1,5 +1,9 @@
 # aws-msk-kafka
 
+<img width="700" alt="Kafka Architecture" src="https://github.com/user-attachments/assets/372e3021-cc69-46d3-90ab-06052b715d05">
+
+
+
 Live Update from Athena:
 -----
 ![live_results](https://github.com/user-attachments/assets/c8221f8e-f68a-4b0e-a1f2-20e2518f2ff3)
